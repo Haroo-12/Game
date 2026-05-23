@@ -1,5 +1,6 @@
 var hitrn =0
 var time = 60
+var score = 0
 function makebuble(){
 var clutter = ""
 for(var i =1;i<=112 ; i++){
@@ -18,6 +19,7 @@ var ans =  setInterval(function(){
     }
   else{
     clearInterval(ans)
+      score = 0 
     document.querySelector("#pbtm").innerHTML =`<h1 class= "kala">gameover</h1>`
   }
 },1000)
@@ -29,7 +31,7 @@ function hittie(){
     document.querySelector("#hitt").textContent = hitrn
 }
 
-var score = 0
+
 
 function incrementvalue(){
  score+=10
