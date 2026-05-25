@@ -1,5 +1,5 @@
 var hitrn =0
-var time = 60
+var time = 5;
 var score = 0
 function makebuble(){
 var clutter = ""
@@ -21,6 +21,17 @@ var ans =  setInterval(function(){
     clearInterval(ans)
       score = 0 
     document.querySelector("#pbtm").innerHTML =`<h1 class= "kala">gameover</h1>`
+    let createbtn = document.createElement("button")
+    createbtn.textContent = "run again"
+    createbtn.setAttribute("id","run-again")
+    document.querySelector("#pbtm").appendChild(createbtn)
+    let runagainbtn = document.querySelector("#run-again")
+    runagainbtn.addEventListener("click" ,function(){
+        time = 5
+        document.querySelector("#timer").textContent= time
+        runtimer()
+        makebuble()
+    })
   }
 },1000)
 }
